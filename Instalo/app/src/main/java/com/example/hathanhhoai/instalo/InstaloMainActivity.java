@@ -14,16 +14,19 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.RelativeLayout;
 
 import TabLayout.PagerAdapter;
 
 public class InstaloMainActivity extends AppCompatActivity {
+    RelativeLayout image_background_menu;
+
     String TITLES[] = {"Home", "Stared Member", "Nearby", "Search Member", "About", "Setting"};
     int ICONS[] = {R.drawable.ic_home, R.drawable.ic_star, R.drawable.ic_nearby, R.drawable.ic_search_black, R.drawable.ic_about, R.drawable.ic_settings};
 
-    String NAME = "Hà Thanh Hoài";
-    String EMAIL = "hathanhhoaiit@gmail.com";
-    int PROFILE = R.drawable.hoa;
+    String NAME = "Nguyễn Xuân Trúc";
+    String EMAIL = "TrucNX2@fsoft.com.vn";
+    int PROFILE =R.drawable.truc123;
 
     private Toolbar toolbar;                              // Declaring the Toolbar Object
 
@@ -38,7 +41,17 @@ public class InstaloMainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_instalo_main);
+        image_background_menu = (RelativeLayout)findViewById(R.id.image_background_menu_layout);
+//        image_background_menu.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                String MENU_LOGIN[] = {"Add Post","My Profile","My Post","My Following","My Activates","My Favorites","Feedback","Logout"};
+//                int ICON_MENU_LOGIN[]={};
+//            }
+//        });
 
+
+        //toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
         mRecyclerView = (RecyclerView) findViewById(R.id.RecyclerView);
